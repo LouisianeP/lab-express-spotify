@@ -1,7 +1,10 @@
-<div class="results-container">
-    <h1>The Results are : </h1>
-        {{#each searchResults}}
-            <h2>{{name}}</h2>
-            <img src="{{images.0.url}}" alt="{{name}}">
-        {{/each}}
+<h1>The Results are:</h1>
+{{#each searchResults}}
+<div class="card" style="width: 18rem">
+    <div class="card-body">
+    <h2 class="card-title">{{name}}</h2>
+    <img class="image-artist card-img-top" src="{{images.0.url}}" alt="{{name}}">
+    <a href="/albums/{{id}}" class="card-link view-albums">View Albums</a>
+    </div>
 </div>
+{{/each}}
